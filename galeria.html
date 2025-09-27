@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="src/image/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>JC Comunicação Visual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-jccv {
+        background-color: #0d47a1;
+      }
+      .text-jccv-light {
+        color: #ffc107;
+      }
+      body.dark {
+        background-color: #111827;
+      }
+
+      .nav-link.active {
+        color: #ffc107 !important;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        text-decoration-thickness: 3px;
+      }
+
+      .before-after-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+        max-height: 500px;
+      }
+
+      .before-image,
+      .after-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .before-image {
+        clip-path: inset(0 50% 0 0);
+      }
+
+      .after-image {
+        clip-path: inset(0 0 0 50%);
+      }
+
+      .comparison-label {
+        position: absolute;
+        padding: 4px 8px;
+        font-weight: bold;
+        color: #0d47a1;
+        background-color: #ffc107;
+        border-radius: 4px;
+        z-index: 10;
+        opacity: 0.9;
+      }
+
+      .label-before {
+        top: 10px;
+        left: 10px;
+      }
+
+      .label-after {
+        top: 10px;
+        right: 10px;
+      }
+
+      .carousel-video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body class="dark bg-gray-900">
+    <nav
+      class="bg-gray-900 border-gray-700 fixed w-full z-50 top-0 start-0 border-b"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="index.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+            >JC Comunicação Visual</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Abrir menu principal</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900"
+            id="navbar-links"
+          >
+            <li>
+              <a
+                href="index.html#sobre"
+                class="nav-link block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-jccv-light md:p-0"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#servicos"
+                class="nav-link block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-jccv-light md:p-0"
+                >Serviços</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="nav-link active block py-2 px-3 text-jccv-light rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-jccv-light md:p-0"
+                aria-current="page"
+                >Galeria</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html#contato"
+                class="nav-link block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-jccv-light md:p-0"
+                >Contato</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-[72px]">
+      <section class="bg-gray-900 py-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-extrabold text-white mb-8 text-center">
+            Antes & Depois
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+              class="bg-gray-800 rounded-lg p-4 text-center shadow-lg transform transition duration-300 hover:scale-105"
+            >
+              <h3 class="text-lg font-bold text-jccv-light mb-4">Projeto 1</h3>
+              <div class="flex justify-between gap-2">
+                <div class="w-1/2">
+                  <img
+                    src="src/image/antes&depois/antes1.jpeg"
+                    alt="Antes"
+                    class="rounded-lg h-64 w-full object-cover mb-2"
+                  />
+                  <span class="text-sm text-gray-400">ANTES</span>
+                </div>
+                <div class="w-1/2">
+                  <img
+                    src="src/image/antes&depois/depois1.jpeg"
+                    alt="Depois"
+                    class="rounded-lg h-64 w-full object-cover mb-2"
+                  />
+                  <span class="text-sm text-jccv-light">DEPOIS</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg p-4 text-center shadow-lg transform transition duration-300 hover:scale-105"
+            >
+              <h3 class="text-lg font-bold text-jccv-light mb-4">Projeto 2</h3>
+              <div class="flex justify-between gap-2">
+                <div class="w-1/2">
+                  <img
+                    src="src/image/antes&depois/antes2.jpeg"
+                    alt="Antes"
+                    class="rounded-lg h-64 w-full object-cover mb-2"
+                  />
+                  <span class="text-sm text-gray-400">ANTES</span>
+                </div>
+                <div class="w-1/2">
+                  <img
+                    src="src/image/antes&depois/depois2.jpeg"
+                    alt="Depois"
+                    class="rounded-lg h-64 w-full object-cover mb-2"
+                  />
+                  <span class="text-sm text-jccv-light">DEPOIS</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg p-4 text-center shadow-lg transform transition duration-300 hover:scale-105"
+            >
+              <h3 class="text-lg font-bold text-jccv-light mb-4">Projeto 3</h3>
+              <div class="flex justify-between gap-2">
+                <div class="w-1/2">
+                  <img
+                    src="src/image/antes&depois/antes3.jpeg"
+                    alt="Antes"
+                    class="rounded-lg h-64 w-full object-cover mb-2"
+                  />
+                  <span class="text-sm text-gray-400">ANTES</span>
+                </div>
+                <div class="w-1/2">
+                  <img
+                    src="src/image/antes&depois/depois3.jpeg"
+                    alt="Depois"
+                    class="rounded-lg h-64 w-full object-cover mb-2"
+                  />
+                  <span class="text-sm text-jccv-light">DEPOIS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-jccv py-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-extrabold text-white mb-8 text-center">
+            Mais Transformações
+          </h2>
+
+          <div class="flex justify-center mb-16">
+            <div
+              class="w-full md:w-1/3 bg-gray-800 rounded-lg p-4 text-center shadow-lg transform transition duration-300 hover:scale-105"
+            >
+              <h3 class="text-lg font-bold text-jccv-light mb-4">Projeto 4</h3>
+              <div class="flex justify-between gap-2">
+                <div class="w-1/2">
+                  <img
+                    src="src/image/antes&depois/antes4.jpeg"
+                    alt="Antes"
+                    class="rounded-lg h-64 w-full object-cover mb-2"
+                  />
+                  <span class="text-sm text-gray-400">ANTES</span>
+                </div>
+                <div class="w-1/2">
+                  <img
+                    src="src/image/antes&depois/depois4.jpeg"
+                    alt="Depois"
+                    class="rounded-lg h-64 w-full object-cover mb-2"
+                  />
+                  <span class="text-sm text-jccv-light">DEPOIS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-4xl font-extrabold text-white mb-8 text-center mt-16">
+            Vídeos de Nossos Projetos
+          </h2>
+
+          <div
+            id="video-carousel"
+            class="relative w-full max-w-2xl mx-auto mb-16"
+            data-carousel="static"
+          >
+            <div class="relative h-[400px] overflow-hidden rounded-lg">
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div
+                  class="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full flex items-center justify-center"
+                >
+                  <video
+                    class="carousel-video rounded-t-lg"
+                    controls
+                    muted
+                    poster="src/image/videos/thumbnail1.jpg"
+                  >
+                    <source src="src/image/video1.mp4" type="video/mp4" />
+                    Seu navegador não suporta a tag de vídeo.
+                  </video>
+                </div>
+              </div>
+
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div
+                  class="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full flex items-center justify-center"
+                >
+                  <video
+                    class="carousel-video rounded-t-lg"
+                    controls
+                    muted
+                    poster="src/image/videos/thumbnail2.jpg"
+                  >
+                    <source src="src/image/video2.mp4" type="video/mp4" />
+                    Seu navegador não suporta a tag de vídeo.
+                  </video>
+                </div>
+              </div>
+
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div
+                  class="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full flex items-center justify-center"
+                >
+                  <video
+                    class="carousel-video rounded-t-lg"
+                    controls
+                    muted
+                    poster="src/image/videos/thumbnail3.jpg"
+                  >
+                    <source src="src/image/video3.mp4" type="video/mp4" />
+                    Seu navegador não suporta a tag de vídeo.
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-900 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+                <span class="sr-only">Anterior</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-900 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+                <span class="sr-only">Próximo</span>
+              </span>
+            </button>
+          </div>
+          <h2 class="text-4xl font-extrabold text-white mb-8 text-center mt-16">
+            Outros Projetos
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/1.jpeg"
+                alt="Projeto 1"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 5
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/2.jpeg"
+                alt="Projeto 2"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 6
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/3.jpeg"
+                alt="Projeto 3"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 7
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/4.jpeg"
+                alt="Projeto 4"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 8
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/6.jpeg"
+                alt="Projeto 6"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 9
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/7.jpeg"
+                alt="Projeto 7"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 10
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/8.jpeg"
+                alt="Projeto 8"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 11
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/9.jpeg"
+                alt="Projeto 9"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 12
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/11.jpeg"
+                alt="Projeto 11"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 13
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/13.jpeg"
+                alt="Projeto 13"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 14
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/14.jpeg"
+                alt="Projeto 14"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 15
+              </p>
+            </div>
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+            >
+              <img
+                src="src/image/15.jpeg"
+                alt="Projeto 15"
+                class="w-full h-48 object-cover"
+              />
+              <p class="text-sm p-2 text-center text-jccv-light font-medium">
+                Projeto 16
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-700 m-4">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-2xl font-semibold whitespace-nowrap text-white"
+            >JC Comunicação Visual</span
+          >
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-400 sm:mb-0"
+          >
+            <li>
+              <a href="index.html#sobre" class="hover:underline me-4 md:me-6"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a href="index.html#servicos" class="hover:underline me-4 md:me-6"
+                >Serviços</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Galeria</a>
+            </li>
+            <li>
+              <a href="index.html#contato" class="hover:underline">Contato</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="my-6 border-gray-700 sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-gray-400 sm:text-center"
+          >© 2024
+          <a href="#" class="hover:underline">JC Comunicação Visual™</a>. Todos
+          os Direitos Reservados.</span
+        >
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>

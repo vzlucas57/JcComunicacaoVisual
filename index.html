@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="src/image/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>JC Comunicação Visual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-jccv {
+        background-color: #0d47a1;
+      }
+      .text-jccv-light {
+        color: #ffc107;
+      }
+      body.dark {
+        background-color: #111827;
+      }
+
+      .nav-link.active {
+        color: #ffc107 !important;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        text-decoration-thickness: 3px;
+      }
+
+      .icon-whatsapp {
+        fill: currentColor;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        margin-right: 0.25em;
+      }
+      .icon-instagram {
+        fill: currentColor;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        margin-right: 0.25em;
+      }
+    </style>
+  </head>
+  <body class="dark bg-gray-900">
+    <nav
+      class="bg-gray-900 border-gray-700 fixed w-full z-50 top-0 start-0 border-b"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+            >JC Comunicação Visual</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Abrir menu principal</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900"
+            id="navbar-links"
+          >
+            <li>
+              <a
+                href="#sobre"
+                class="nav-link block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-jccv-light md:p-0"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a
+                href="#servicos"
+                class="nav-link block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-jccv-light md:p-0"
+                >Serviços</a
+              >
+            </li>
+            <li>
+              <a
+                href="galeria.html"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-jccv-light md:p-0"
+                >Galeria</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contato"
+                class="nav-link block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-jccv-light md:p-0"
+                >Contato</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-[72px]">
+      <section
+        id="sobre"
+        class="relative py-16 min-h-[35vh] flex items-center justify-center text-white"
+        style="
+          background-image: url('src/image/logo.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-attachment: fixed;
+          background-color: #1a202c;
+        "
+      >
+        <div class="absolute inset-0 bg-gray-900 opacity-85"></div>
+
+        <div
+          class="relative z-10 max-w-screen-xl mx-auto py-8 lg:py-16 px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <h1
+            class="text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 text-white"
+          >
+            JC Comunicação Visual
+          </h1>
+          <p class="text-xl lg:text-2xl font-light text-jccv-light mb-8">
+            Transformamos sua identidade visual em destaque!
+          </p>
+          <p
+            class="mb-8 text-lg font-normal text-white md:text-xl lg:text-xl max-w-3xl mx-auto"
+          >
+            Com anos de experiência no mercado, oferecemos soluções completas
+            para quem busca qualidade, modernidade e impacto visual.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-8"
+          >
+            <a
+              href="#contato"
+              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 bg-white"
+            >
+              Solicite seu orçamento agora e leve sua marca a outro nível!
+            </a>
+            <a
+              href="galeria.html"
+              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-jccv-light rounded-lg transform transition duration-300 hover:scale-105 focus:ring-4 focus:ring-jccv-light-200"
+            >
+              <svg
+                class="w-4 h-4 me-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h18M1 13h18M10 1v12"
+                />
+              </svg>
+              Ver Galeria de Projetos
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="bg-gray-900 py-16 min-h-screen">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-extrabold text-white mb-8 text-center">
+            Nossos Serviços de Excelência
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-6 bg-gray-800 rounded-lg shadow-xl">
+              <svg
+                class="w-10 h-10 mb-2 text-jccv-light"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">Fachadas em ACM</h3>
+              <p class="text-gray-400">
+                Personalizadas e modernas para o máximo impacto visual.
+              </p>
+            </div>
+            <div class="p-6 bg-gray-800 rounded-lg shadow-xl">
+              <svg
+                class="w-10 h-10 mb-2 text-jccv-light"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Lonas com Proteção UV
+              </h3>
+              <p class="text-gray-400">
+                Resistência e durabilidade que garantem sua mensagem por mais
+                tempo.
+              </p>
+            </div>
+            <div class="p-6 bg-gray-800 rounded-lg shadow-xl">
+              <svg
+                class="w-10 h-10 mb-2 text-jccv-light"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Letreiros em PVC Expandido
+              </h3>
+              <p class="text-gray-400">
+                Acabamento profissional e sofisticado para sua marca.
+              </p>
+            </div>
+            <div class="p-6 bg-gray-800 rounded-lg shadow-xl">
+              <svg
+                class="w-10 h-10 mb-2 text-jccv-light"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Coberturas com Telhas Galvanizadas
+              </h3>
+              <p class="text-gray-400">
+                Proteção robusta e design inteligente para diversas aplicações.
+              </p>
+            </div>
+            <div class="p-6 bg-gray-800 rounded-lg shadow-xl">
+              <svg
+                class="w-10 h-10 mb-2 text-jccv-light"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Estruturas Metálicas e Serralheria
+              </h3>
+              <p class="text-gray-400">
+                Projetos sob medida, garantindo solidez e segurança.
+              </p>
+            </div>
+            <div class="p-6 bg-gray-800 rounded-lg shadow-xl">
+              <svg
+                class="w-10 h-10 mb-2 text-jccv-light"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Totens e Placas Luminosas
+              </h3>
+              <p class="text-gray-400">
+                Alta visibilidade dia e noite para maximizar seu alcance.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-16 bg-jccv p-8 rounded-lg shadow-xl">
+            <h3 class="text-2xl font-extrabold text-white mb-4 text-center">
+              Por que escolher a JC Comunicação Visual?
+            </h3>
+            <div
+              class="flex flex-col md:flex-row justify-around text-center space-y-4 md:space-y-0"
+            >
+              <p class="text-lg font-light text-jccv-light py-2 md:py-0">
+                <span class="font-bold text-xl">✔</span> Equipe especializada
+              </p>
+              <p class="text-lg font-light text-jccv-light py-2 md:py-0">
+                <span class="font-bold text-xl">✔</span> Materiais de alta
+                qualidade
+              </p>
+              <p class="text-lg font-light text-jccv-light py-2 md:py-0">
+                <span class="font-bold text-xl">✔</span> Pontualidade na entrega
+              </p>
+              <p class="text-lg font-light text-jccv-light py-2 md:py-0">
+                <span class="font-bold text-xl">✔</span> Atendimento
+                personalizado
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="bg-jccv py-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-extrabold text-white mb-8">Fale Conosco</h2>
+          <p class="text-xl font-light text-jccv-light mb-12">
+            Solicite seu orçamento agora e leve sua marca a outro nível!
+          </p>
+
+          <div
+            class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-12"
+          >
+            <a
+              href="https://wa.me/5581992971031"
+              target="_blank"
+              class="p-6 md:w-80 rounded-lg shadow-2xl bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105 block"
+            >
+              <p class="text-2xl font-extrabold text-gray-900 mb-2">WhatsApp</p>
+              <p class="text-2xl font-semibold text-gray-900">
+                <span class="text-3xl mr-2">📞</span> (81) 9.9297-1031
+              </p>
+            </a>
+
+            <a
+              href="https://www.instagram.com/jc.comunicacao_visual"
+              target="_blank"
+              class="p-6 md:w-80 rounded-lg shadow-2xl bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105 block"
+            >
+              <p class="text-2xl font-extrabold text-gray-900 mb-2">
+                Instagram
+              </p>
+              <p class="text-2xl font-semibold text-gray-900">
+                <span class="text-3xl mr-2">📸</span> @jc.comunicacao_visual
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-700 m-4">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-2xl font-semibold whitespace-nowrap text-white"
+            >JC Comunicação Visual</span
+          >
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-400 sm:mb-0"
+          >
+            <li>
+              <a href="#sobre" class="hover:underline me-4 md:me-6">Sobre</a>
+            </li>
+            <li>
+              <a href="#servicos" class="hover:underline me-4 md:me-6"
+                >Serviços</a
+              >
+            </li>
+            <li>
+              <a href="galeria.html" class="hover:underline me-4 md:me-6"
+                >Galeria</a
+              >
+            </li>
+            <li><a href="#contato" class="hover:underline">Contato</a></li>
+          </ul>
+        </div>
+        <hr class="my-6 border-gray-700 sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-gray-400 sm:text-center"
+          >© 2024
+          <a href="#" class="hover:underline">JC Comunicação Visual™</a>. Todos
+          os Direitos Reservados.</span
+        >
+      </div>
+    </footer>
+
+    <footer class="bg-gray-900 border-t border-gray-700 m-4"></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script src="src/js/script.js"></script>
+  </body>
+</html>

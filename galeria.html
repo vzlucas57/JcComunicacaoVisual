@@ -32,6 +32,15 @@
         text-decoration-thickness: 3px;
       }
 
+      .main-content {
+        padding-top: 72px;
+      }
+      @media (min-width: 768px) {
+        .main-content {
+          padding-top: 72px;
+        }
+      }
+
       .before-after-container {
         position: relative;
         overflow: hidden;
@@ -164,7 +173,7 @@
         </div>
       </div>
     </nav>
-    <main class="pt-[72px]">
+    <main class="main-content">
       <section class="bg-gray-900 py-16">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-4xl font-extrabold text-white mb-8 text-center">
@@ -180,7 +189,7 @@
                   <img
                     src="src/image/antes&depois/antes1.jpeg"
                     alt="Antes"
-                    class="rounded-lg h-64 w-full object-cover mb-2"
+                    class="rounded-lg h-56 sm:h-64 w-full object-cover mb-2"
                   />
                   <span class="text-sm text-gray-400">ANTES</span>
                 </div>
@@ -188,7 +197,7 @@
                   <img
                     src="src/image/antes&depois/depois1.jpeg"
                     alt="Depois"
-                    class="rounded-lg h-64 w-full object-cover mb-2"
+                    class="rounded-lg h-56 sm:h-64 w-full object-cover mb-2"
                   />
                   <span class="text-sm text-jccv-light">DEPOIS</span>
                 </div>
@@ -203,7 +212,7 @@
                   <img
                     src="src/image/antes&depois/antes2.jpeg"
                     alt="Antes"
-                    class="rounded-lg h-64 w-full object-cover mb-2"
+                    class="rounded-lg h-56 sm:h-64 w-full object-cover mb-2"
                   />
                   <span class="text-sm text-gray-400">ANTES</span>
                 </div>
@@ -211,7 +220,7 @@
                   <img
                     src="src/image/antes&depois/depois2.jpeg"
                     alt="Depois"
-                    class="rounded-lg h-64 w-full object-cover mb-2"
+                    class="rounded-lg h-56 sm:h-64 w-full object-cover mb-2"
                   />
                   <span class="text-sm text-jccv-light">DEPOIS</span>
                 </div>
@@ -226,7 +235,7 @@
                   <img
                     src="src/image/antes&depois/antes3.jpeg"
                     alt="Antes"
-                    class="rounded-lg h-64 w-full object-cover mb-2"
+                    class="rounded-lg h-56 sm:h-64 w-full object-cover mb-2"
                   />
                   <span class="text-sm text-gray-400">ANTES</span>
                 </div>
@@ -234,7 +243,7 @@
                   <img
                     src="src/image/antes&depois/depois3.jpeg"
                     alt="Depois"
-                    class="rounded-lg h-64 w-full object-cover mb-2"
+                    class="rounded-lg h-56 sm:h-64 w-full object-cover mb-2"
                   />
                   <span class="text-sm text-jccv-light">DEPOIS</span>
                 </div>
@@ -260,7 +269,7 @@
                   <img
                     src="src/image/antes&depois/antes4.jpeg"
                     alt="Antes"
-                    class="rounded-lg h-64 w-full object-cover mb-2"
+                    class="rounded-lg h-56 sm:h-64 w-full object-cover mb-2"
                   />
                   <span class="text-sm text-gray-400">ANTES</span>
                 </div>
@@ -268,7 +277,7 @@
                   <img
                     src="src/image/antes&depois/depois4.jpeg"
                     alt="Depois"
-                    class="rounded-lg h-64 w-full object-cover mb-2"
+                    class="rounded-lg h-56 sm:h-64 w-full object-cover mb-2"
                   />
                   <span class="text-sm text-jccv-light">DEPOIS</span>
                 </div>
@@ -285,7 +294,9 @@
             class="relative w-full max-w-2xl mx-auto mb-16"
             data-carousel="static"
           >
-            <div class="relative h-[400px] overflow-hidden rounded-lg">
+            <div
+              class="relative h-[300px] sm:h-[400px] overflow-hidden rounded-lg"
+            >
               <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <div
                   class="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full flex items-center justify-center"
@@ -398,7 +409,7 @@
               <img
                 src="src/image/1.jpeg"
                 alt="Projeto 1"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 5
@@ -411,7 +422,7 @@
               <img
                 src="src/image/2.jpeg"
                 alt="Projeto 2"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 6
@@ -423,7 +434,7 @@
               <img
                 src="src/image/3.jpeg"
                 alt="Projeto 3"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 7
@@ -435,7 +446,7 @@
               <img
                 src="src/image/4.jpeg"
                 alt="Projeto 4"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 8
@@ -447,7 +458,7 @@
               <img
                 src="src/image/6.jpeg"
                 alt="Projeto 6"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 9
@@ -459,7 +470,7 @@
               <img
                 src="src/image/7.jpeg"
                 alt="Projeto 7"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 10
@@ -471,7 +482,7 @@
               <img
                 src="src/image/8.jpeg"
                 alt="Projeto 8"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 11
@@ -483,7 +494,7 @@
               <img
                 src="src/image/9.jpeg"
                 alt="Projeto 9"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 12
@@ -495,7 +506,7 @@
               <img
                 src="src/image/11.jpeg"
                 alt="Projeto 11"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 13
@@ -507,7 +518,7 @@
               <img
                 src="src/image/13.jpeg"
                 alt="Projeto 13"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 14
@@ -519,7 +530,7 @@
               <img
                 src="src/image/14.jpeg"
                 alt="Projeto 14"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 15
@@ -531,7 +542,7 @@
               <img
                 src="src/image/15.jpeg"
                 alt="Projeto 15"
-                class="w-full h-48 object-cover"
+                class="w-full h-40 sm:h-48 object-cover"
               />
               <p class="text-sm p-2 text-center text-jccv-light font-medium">
                 Projeto 16
@@ -578,5 +589,6 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="src/js/script.js"></script>
   </body>
 </html>

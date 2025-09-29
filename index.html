@@ -48,6 +48,14 @@
         vertical-align: middle;
         margin-right: 0.25em;
       }
+      .main-content {
+        padding-top: 72px;
+      }
+      @media (min-width: 768px) {
+        .main-content {
+          padding-top: 72px;
+        }
+      }
     </style>
   </head>
   <body class="dark bg-gray-900">
@@ -124,10 +132,10 @@
         </div>
       </div>
     </nav>
-    <main class="pt-[72px]">
+    <main class="main-content">
       <section
         id="sobre"
-        class="relative py-16 min-h-[35vh] flex items-center justify-center text-white"
+        class="relative py-16 min-h-[50vh] flex items-center justify-center text-white"
         style="
           background-image: url('src/image/logo.png');
           background-size: cover;
